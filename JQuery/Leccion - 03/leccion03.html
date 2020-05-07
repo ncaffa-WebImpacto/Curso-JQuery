@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 03 - Eventos</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<style>
+
+		.img100{
+			width: 100px;
+			height: 100px;
+		}
+
+		.divRojo{
+			background-color: red;
+			width: 100px;
+			height: 100px;
+		}
+
+	</style>
+</head>
+<body>
+
+
+<div class="container">
+	
+	<h1>Lección 03: Eventos</h1>
+	<hr>
+
+
+	<button id="bot1" class="btn btn-primary">Evento Click</button>
+	
+	<hr>
+
+		<img src="img/profesor.jpg" class="img100">
+
+		<br><br>
+
+		<div class="divRojo">
+
+		</div>
+
+		<br><br>
+
+		<a id="link" href="http://www.google.com">Ir a google</a>
+
+		<br><br>
+
+</div>
+
+
+<script>
+	
+	$("#bot1").on("click",function(){
+		console.log("Click!!!");
+	});
+
+	$(".img100").on("mouseenter",function(){
+
+		$(this).attr("src","img/nophoto.jpg");
+
+	});
+
+	$(".img100").on("mouseleave",function(){
+
+		$(this).attr("src","img/profesor.jpg");
+
+	});
+
+	$(".divRojo").on("click",function(){
+
+		console.log("Click en el div rojo");
+
+	});
+
+	//Controles especiales para links
+	//Comportamieno por defecto
+	$("#link").on('click',function(e){
+
+		e.preventDefault();
+
+		console.log("Click en el link....");
+
+		var link = $(this).attr("href");
+
+		console.log( link );
+
+		window.location = link;
+
+	});
+
+	$(document).ready(function(){
+		console.log("La pagina esta lista");
+	});
+
+	
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

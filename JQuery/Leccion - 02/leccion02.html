@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 02 - Selectores y Encadenamiento</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+	<!-- Estilo para esta pagina -->
+	<style>
+		
+		img{
+			width: 200px;
+			height: 200px;
+		}
+	
+		hr{
+			margin-bottom: 60px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+<div class="container">
+	
+	<h1>Selectores y Encadenamiento</h1>
+	<hr>
+
+	<div class="row">
+		
+		<div class="col-sm-4 text-center">
+			<img src="img/nophoto.jpg">
+			<h4>Nicolas Caffa</h4>
+		</div>
+
+		<div class="col-sm-5">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+				Quibusdam aspernatur ab commodi tenetur, quisquam.
+			</p>
+
+		</div>
+
+		<div class="col-sm-3">
+			<ul>
+				<li>Matemática</li>
+				<li>Programación</li>
+				<li>Análisis</li>
+				<li>Física</li>
+				<li>Geografía</li>
+			</ul>
+		</div>
+
+	</div>
+	
+	<script>
+
+		// $("img")
+		// 	.attr("src","img/profesor.jpg") // cambia el src
+		// 	.removeClass('img-circle') // borra la clase
+		// 	.addClass('img-thumbnail');// agrega clase
+
+		//manejo de las imagenes
+		$("img")
+		 	.attr("src","img2/descarga.png") // cambia el src
+		 	.addClass('img-thumbnail img-circle');// agrega clase
+
+		//cojer por clase y solo el primero
+		//console.log($('.col-sm-5').children("p").eq(0));
+		
+
+		// $("img").attr("src","img/profesor.jpg");
+		// $("img").removeClass('img-circle');
+		// $("img").addClass('img-thumbnail');
+
+		// Modificaciones al segundo bloque
+		$('.col-sm-5')
+			.find("p")
+			// .text("Saludos, soy un <u>cateto</u> de udemy");
+			.html("Saludos, soy un <u>cateto</u> de udemy");
+
+		//Referencia a la lista ordenada
+
+		$("ul li")
+			.eq(0).css("color","red").end()
+			.eq(1).css("color","purple").end()
+			.eq(2).css("color","orange").end()
+			.eq(3).css("color","yellow").end()
+			.eq(4).css("color","green").end();
+
+	</script>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

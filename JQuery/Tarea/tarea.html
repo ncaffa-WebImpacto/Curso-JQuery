@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+            <h1>Tarea <small>tabla del 5</small></h1>
+            <hr>
+
+
+            <select id="cmbBase">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+
+            <button class="btn btn-primary">Agregar linea</button>
+            <br><br>
+
+
+            <table class="table table-striped">
+                <tr>
+
+                        <th>base</th>
+                        <th>X</th>
+                        <th>Numero</th>
+                        <th>=</th>
+                        <th>Resultado</th>
+
+                </tr>
+
+            </table>
+    </div>
+
+    <script>
+
+
+        (function(){
+
+            var numero= 0;
+
+            $("button").on("click",function(){
+                numero ++;
+                var base = $("#cmbBase").val();
+
+                var linea = ""
+
+                    linea += "<tr>";
+                    linea += "<td>"+ base +"</td>";
+                    linea += "<td>x</td>";
+                    linea += "<td>"+numero+"</td>";
+                    linea += "<td>=</td>";
+                    linea += "<td>"+numero * base+"</td>";
+                    linea += "<tr>";
+
+                $("table").append(linea);
+                   
+             
+             });
+
+
+             // Funcion que deteca el cambio de la base
+
+             $("#cmbBase").on("change",function(){
+
+                $("tr").not(":eq(0)").remove();
+                numero = 0;
+
+             });
+
+        })();
+       
+
+    </script>
+    
+</body>
+</html>

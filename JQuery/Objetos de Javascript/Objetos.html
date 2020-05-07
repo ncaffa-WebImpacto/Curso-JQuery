@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Objetos 101</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container text-center">
+	
+	<h1>Objetos 101: <small>Comprendiendo lo básico</small></h1>
+	<hr>
+	
+
+
+</div>
+
+
+<script>
+
+	var carro = {
+		llantas:4,
+		puertas:5,
+		fabricante: {
+				creador:"toyota",
+				telefono:"5555-5555",
+				direccion:"xyz avenid 123"
+		},
+		colores: ["azul","blanco","rojo","negro"],
+	};
+	var fab = carro.fabricante;
+
+	console.log(fab.direccion);
+	console.log(fab.creador);
+	console.log(fab.telefono);
+
+	fab.direccion="ABD Avenida 321";
+
+	console.log(fab.direccion);
+
+	console.log(carro.fabricante);
+
+
+</script>
+
+
+
+</body>
+</html>

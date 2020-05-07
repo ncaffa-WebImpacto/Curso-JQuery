@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 03 - Eventos</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container">
+	
+	<h1>Lección 04: Acordeones</h1>
+	<hr>
+
+	<div class="text-center">
+
+		<dl>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			
+		</dl>
+
+	</div>
+
+
+</div>
+
+
+<script>
+	(function(){
+
+	 var dds = $('dd');
+
+	 dds.hide();
+	 dds.eq(0).show();
+
+
+	 $('dt').on('mouseenter',function(){
+
+		 dds.slideUp(200);
+
+			$(this)
+		    	 .next()
+		 	     .slideDown(200);
+
+	 });
+
+	})();
+
+</script>
+
+
+
+</body>
+</html>
