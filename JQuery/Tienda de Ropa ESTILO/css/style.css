@@ -1,0 +1,10 @@
+.imgThumb{
+	display: block;
+	cursor: pointer;
+}
+
+
+.imgRating{
+	width: 30px;
+	height: 30px;
+}

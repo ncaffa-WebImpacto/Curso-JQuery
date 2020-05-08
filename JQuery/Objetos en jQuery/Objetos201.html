@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Objetos 201</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container text-center">
+	
+	<h1>Objetos 201: <small>Objetos en jQuery</small></h1>
+	<hr>
+	
+	 
+
+
+
+</div>
+
+
+<script>
+
+	// var caja ='<input type="text" class="form-control" placeholder="ingrese su nombre">';
+
+	// $(".container").append(caja);
+
+	$("<input>", {
+		type: "text",
+		class: "form-control",
+		placeholder: "Ingresa su nombre"
+	})
+			.appendTo('.container')
+			 .on("keypress",function(e){
+					console.log(e.keyCode);
+			});
+
+	$("input").css({
+		position:"relative",
+		top:	 "200px"
+	});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

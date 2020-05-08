@@ -20,6 +20,9 @@
 	
 	<h1>Objetos 101: <small>Comprendiendo lo básico</small></h1>
 	<hr>
+
+	<button id="botEncender" class="btn btn-primary">Encender</button>
+	<button id="botApagar" class="btn btn-danger">Apagar</button>
 	
 
 
@@ -29,6 +32,7 @@
 <script>
 
 	var carro = {
+		estado:false,
 		llantas:4,
 		puertas:5,
 		fabricante: {
@@ -37,18 +41,43 @@
 				direccion:"xyz avenid 123"
 		},
 		colores: ["azul","blanco","rojo","negro"],
+		arrancar: function(){
+			if(carro.estado){
+				 console.log("ya estaba encendido")
+			}else{
+				console.log("El vehiculo arranco");
+				this.estado=true;
+				console.log(this);
+			}
+			
+
+		},
+
+		apagar:function(){
+			if(!carro.estado){
+				 console.log("ya estaba apagado")
+			}else{
+				console.log("El vehiculo se apago");
+				this.estado=false;
+				console.log(this);
+			}
+		}
 	};
-	var fab = carro.fabricante;
 
-	console.log(fab.direccion);
-	console.log(fab.creador);
-	console.log(fab.telefono);
+	$("#botEncender").on("click",function(){
+		carro.arrancar();
 
-	fab.direccion="ABD Avenida 321";
+	});
 
-	console.log(fab.direccion);
+	$("#botApagar").on("click",function(){
+		carro.apagar();
 
-	console.log(carro.fabricante);
+	});
+
+
+
+	
+	
 
 
 </script>

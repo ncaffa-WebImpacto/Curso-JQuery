@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Presentacion de Vehículo</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container text-center">
+	
+	<h1>Objetos Prácticos: <small>Ejemplo de vehículo</small></h1>
+	<hr>
+	
+
+	 
+	<div class="divPreloader">
+		<img src="img/loading.gif" class="imgLoader img-responsive">
+	</div> 
+
+	
+	<div class="divVistaPrevia">
+		<img id="imgCarro" class="img-responsive">
+	</div>
+
+	<div class="form-group">
+	    <div class="col-sm-offset-4 col-sm-5">
+	      	<select id="cmbColor" class="form-control">
+	      		<!-- <option value="blanco">Blanco</option> -->
+	      	</select>
+	    </div>
+	</div>
+	
+</div>
+
+
+
+<script>
+	
+(function(){
+
+
+	var selector = {
+
+		loader: $(".divPreloader"),
+		colores: ['blanco','cafe','verde','negro'],
+
+		cambiarColor: function( img ){
+
+			var $loader = selector.loader;
+
+			$loader.fadeIn(150);
+
+				if(img === undefined){
+					var color = selector.colores[0];
+					var img = "img/tesla/modelS-"+color+".jpg";
+				
+				}
+
+
+				$("<img>",{
+					src: img,
+					class: "img-responsive"
+				})
+
+					.load( function(){
+	
+						$(".divVistaPrevia").find("img").remove();
+						$(this).appendTo(".divVistaPrevia");
+
+						
+						$loader.fadeOut(150);
+					})
+
+
+		},
+
+		// funcion principal
+		init: function( opciones ){
+
+				$.extend( selector,opciones );
+
+
+			// bucle para rellenar el option
+			for( var i =0;i<this.colores.length;i++){
+				var color= this.colores[i];
+
+				$("<option>",{
+					value: color,
+					text:color,
+				}).appendTo('#cmbColor');
+			}
+			// nueva funcion cambio
+			$("#cmbColor").on("change",function(){
+
+						var color = $(this).val();
+						var url =  "img/tesla/modelS-"+color+".jpg";
+						selector.cambiarColor( url);
+						// $("#imgCarro").attr("src",url);
+			});
+
+
+			// cambiar la imagen al iniciar
+
+			selector.cambiarColor();
+
+		}
+
+	};
+
+	selector.init({
+		colores: ['rojo','cafe','verde','negro','gris','rojooscuro','azul','blanco'],
+	});
+
+
+	// $("#cmbColor").on("change",function(){
+	// 	var color = $(this).val();
+	// 	var url =  "img/tesla/modelS-"+color+".jpg";
+
+	// 	$("#imgCarro").attr("src",url);
+	// })
+
+
+
+})();
+
+</script>
+
+
+
+
+
+</body>
+</html>
