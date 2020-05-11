@@ -18,7 +18,8 @@ body{
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.4;
+    opacity: 0;
+    display: none;
  
     z-index: 99998;
 
@@ -28,9 +29,12 @@ body{
 .bigBox-Contenedor{
     position: fixed;
     width: 600px;
-    top: 150px;
-    left: 150px;
+    /* top: 150px;
+    left: 150px; */
     /* height: 400px; */
+    display: none;
+
+    opacity: 0;
 
     background-color: #f4f4f4;
     border: 1px solid #a9a9a9;
