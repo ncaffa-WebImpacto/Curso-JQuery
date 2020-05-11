@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Tarea</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+
+	<script src="js/lib/TweenMax.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+	<!-- Estilo -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- smallbox JS -->
+	<script src="js/smallbox.js"></script>
+
+</head>
+<body>
+
+
+<!-- sb-topright: Lo que hace es crear una caja donde metere todas
+	las notificaciones... esto hara que si llamo multiples smallboxes
+	todas se vayan apilando una abajo de la otra.
+
+	El cuerpo de la notificacion es el sb-body. donde hay 3 divs
+	qeu contienen las 3 secciones que necesitamos.
+	 -->
+
+
+<!-- Descomenta el siguiente codigo para ver el diseño -->
+ <!-- 
+<div class="sb-topright">
+	
+
+	<div class="sb-body" style="background-color: #58167d;">
+		
+		<div class="sb-foto">
+			<img src="img/foto.jpg">
+		</div>
+	
+		
+		<div class="sb-contenido" align="right">
+			<span> 
+				<span class="sb-titulo">Fernando Herrera</span>
+				<br> San Isidro, Coronado
+			</span>
+		</div>
+	
+		
+		<div class="sb-icon">
+			<i class="fa fa-comments-o"></i>
+		</div>
+
+
+	</div>
+
+
+
+</div> 
+ -->
+
+
+
+
+
+<!-- Boton para llamar la notificaión -->
+<div class="container page-header">
+	<button id="bot1" class="btn btn-primary">Básica!</button>
+	<button id="bot2" class="btn btn-primary">Sin Imagen!</button>
+</div>
+
+
+
+
+<script>
+
+$(document).ready(function(){
+
+	// Funciones de los botones
+	$("#bot1").on('click', function() {
+		
+		$.smallBox({
+			img: "img/foto.jpg",
+			titulo: "Fernando Herrera",
+			subtitulo: "San Isidro, Coronado",
+		});
+
+	});
+
+
+	$("#bot2").on('click', function() {
+		
+		$.smallBox({
+			titulo: "Karen Melissa",
+			subtitulo: "5 segundos timeout.. esta..",
+			fa: "fa-moon-o",
+			color: "#ba007c",
+			timeout: 5000
+		});
+
+	});
+
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+</html>
