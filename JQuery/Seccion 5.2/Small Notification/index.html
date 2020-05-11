@@ -13,44 +13,44 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="fontawesome/css/all.css">  -->
+	<!-- <link rel="stylesheet" href="fontawesome/css/all.min.css">  -->
+	<link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="fontawesome/css/fontawesome.css">
+	<link rel="stylesheet" href="fontawesome/css/regular.min.css">
+	<link rel="stylesheet" href="fontawesome/css/solid.min.css">
+	<link rel="stylesheet" href="fontawesome/css/brands.min.css">
+	<link rel="stylesheet" href="fontawesome/css/v4-shims.min.css">
+	<link rel="stylesheet" href="fontawesome/css/svg-with-js.min.css">
+
+	<script src="js/smallBox.js"></script>
 
 
 </head>
 <body>
 
-	<div class="smallBox-contentedor">
-
+	<!-- <div class="smallBox-contentedor">
 			<div class="smallBox-foto">
 				<img src="img/foto.jpg">
 			</div>
 
 			<div class="smallBox-contenido" align="center">
-
 				<div class="smallBox-textoContenedor" align="left">
 					<span class="smallBox-titulo">Al aire</span>
 					<span class="smallBox-subTitulo">La voz de España en vivo</span>
 				</div>
-
 				<div class="smallBox-pico"></div>
-
 				<div class="smallBox-cajaColor">
-						
 					<div class="smallBox-colorTexto">
-							@ Karen Melissa 107.1fm
+						<i class="fa fa-bell-o"></i> Karen Melissa 107.1fm
 					</div>
-
 					<div class="smallBox-colorIcon">
-						@
+						<i class="fa fa-envelope-o fa-2x"></i>
 					</div>
-
 				</div>
-
 				<div class="smallBox-sombra"></div>
-
-
 			</div>
-			
-	</div>
+	</div> -->
 
 
 <div class="container">
@@ -63,6 +63,18 @@
 
 
 
+<script>
+$(document).ready(function(){
+
+	$.smallBox({
+		titulo: "titulo",
+        subtitulo: "subtitulo",
+        contenido: "Ests es el contenido",
+        img: "img/photo.png"
+	});
+});
+
+</script>
 
 
 
