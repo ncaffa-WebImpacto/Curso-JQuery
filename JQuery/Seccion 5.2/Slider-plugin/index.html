@@ -25,27 +25,8 @@
 	<h1>Slideshow</h1>
 	<hr>
 
-	<div class="slideShow">
-		<ul>
-			<li><img src="img/slide1.png"></li>
-			<li><img src="img/slide2.png"></li>
-			<li><img src="img/slide3.png"></li>
-			<li><img src="img/slide4.png"></li>
-			<li><img src="img/slide2.png"></li>
-			<li><img src="img/slide3.png"></li>
-			<li><img src="img/slide4.png"></li>
-		</ul>
-	</div>
+	<div class="slideShow"></div>
 
-	<div class="slidesShowButtons">
-		<div data-idx="0" class="slideButton"></div>
-		<div data-idx="1" class="slideButton"></div>
-		<div data-idx="2" class="slideButton"></div>
-		<div data-idx="3" class="slideButton"></div>
-
-	</div>
-
-	
 	<!-- <button data-mov="ant" class="btn btn-primary botSlide">Anterior</button>
 	<button data-mov="sig" class="btn btn-primary botSlide">Siguiente</button> -->
 
@@ -62,6 +43,16 @@
 
 
 <script src="js/slideShow.js"></script>
+
+
+<script>
+		$.slideShow({
+			intervalo:3000,
+			slides:['img/slide1.png','img/slide2.png','img/slide3.png','img/slide4.png'],
+			velocidad:1200,
+			color:"green"
+		});
+</script>
 
 
 </body>
