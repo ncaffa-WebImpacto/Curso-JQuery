@@ -1,0 +1,39 @@
+{
+    "activo": false,
+    "balance": "$3,463.46",
+    "foto": "http://placehold.it/32x32",
+    "edad": 29,
+    "colorOjos": "cafe",
+    "nombre": "Karen Melissa",
+    "genero": "mujer",
+    "compania": "Banco",
+    "email": "karenmelissa@banco.com",
+    "telefono": "+1 (979) 434-3163",
+    "direccion": "340 Debevoise Avenue, Grayhawk, Rhode Island, 3467",
+    "sobre": "Ea ipsum ut velit cillum ullamco nisi ipsum sunt veniam proident magna nisi enim in. Ut culpa magna nisi minim incididunt. Duis et laborum ullamco labore exercitation aute qui.\r\n",
+    "registrado": "01-10-2005",
+    "latitude": -36.809208,
+    "longitude": -125.031516,
+    "tags": [
+      "mujer",
+      "casada",
+      "estudiante",
+      "universitaria",
+      "cocina",
+      "conductora"
+    ],
+    "amigos": [
+      {
+        "id": 0,
+        "nombre": "Sandra Lopez"
+      },
+      {
+        "id": 1,
+        "nombre": "Karolina Ortez"
+      },
+      {
+        "id": 2,
+        "nombre": "Daniel Chinchilla"
+      }
+    ]
+}
