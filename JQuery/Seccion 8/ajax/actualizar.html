@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ajax INSERT</title>
+
+    <!-- Importacion del jQuery -->
+    <script src="js/lib/jquery-2.1.4.min.js"></script>
+
+    <script src="js/lib/TweenMax.min.js"></script>
+
+    <!-- Importacion del Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9%22%3E"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Peticiones Ajax, <small> jquery</small></h1>
+    <hr>
+
+    <form class="form-horizontal" id="frmData">
+
+        <input type="hidden" name="txtid" id="txtid" >
+
+        <label >Nombre</label>
+        <input type="text" name="txtnombre" id="txtnombre" class="form-control">
+
+        <label >Estado</label>
+        <select name="cmbestado" id="cmbestado" class="form-control">
+            <option value="activo">Activo</option>
+            <option value="eliminado">Eliminado</option>
+        </select>
+
+        <br>
+        <a href="index.html" class="btn btn-danger"><i class="fa fa-times"></i>Cancelar</a>
+        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>Guardar</button>
+
+
+    </form>
+
+</div>
+
+
+
+<script src="js/actualizar.js"></script>
+
+
+
+
+
+
+</body>
+</html>
