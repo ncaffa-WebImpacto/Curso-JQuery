@@ -1,0 +1,11 @@
+[
+  '{{repeat(5, 7)}}',
+  {
+    age: '{{integer(20, 40)}}',
+    name: '{{firstName()}} {{surname()}}',
+    tags: [
+      '{{repeat(2,5)}}',
+      '{{lorem(1, "words")}}'
+    ]
+  }
+]
