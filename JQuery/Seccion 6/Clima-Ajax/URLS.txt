@@ -1,0 +1,12 @@
+http://api.openweathermap.org/data/2.5/weather?lat=9.975941&lon=-84.007505&units=metric&appid=9f50a805aa0089a1edd1829a5db029f0
+
+
+
+
+http://openweathermap.org/weather-data
+
+http://openweathermap.org/weather-conditions
+
+
+
+https://erikflowers.github.io/weather-icons/
