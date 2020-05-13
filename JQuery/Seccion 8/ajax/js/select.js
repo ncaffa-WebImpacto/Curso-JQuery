@@ -31,7 +31,7 @@
                  content += '<a href="actualizar.html?id='+ alumno.id +'" class="btn btn-primary">Actualizar</a>';                  
                  content += '</td>';
                  content += '<td class="text-center">';
-                 content += '<a href="" data-id="'+ alumno.id +'" class="btn btn-danger">Eliminar</a>'; 
+                 content += '<a href="" data-nombre="'+ alumno.nombre+'" data-id="'+ alumno.id +'" class="btn btn-danger">Eliminar</a>'; 
                  content += '</td>';
                  content += '</tr>';
 
@@ -43,11 +43,67 @@
 		})
 		.fail(function(){
 			console.log("Fallo!");
-		})
-		.always(function(){
-			console.log("Completo!");
 		});
 
-    })
+    });
+
+    $("body").on("click",".botEliminar",function(e){
+
+        e.preventDefault();
+
+        var nombre = $(this).data("nombre");
+        var id = $(this).data('id');
+        
+
+        swal({
+            title: "Estas seguro?",
+            text: "De querer borrar a: " + nombre,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "si, borralo!",
+            cancelButtonText: "No, cancela porfavor",
+            closeOnConfirm: false,
+            closeOnCancel: false
+          },
+          function(isConfirm) {
+            if (isConfirm) {
+
+                borrarRegistro(id);
+
+              swal("Borrado!", "Ha sido borrado.", "succes");
+            } else {
+              swal("Cancelado", "tu archivo esta salvo :)", "error");
+            }
+          });
+
+        });
+
+
+
+    function borrarRegistro( id ){
+
+        // var id = $(this).data('id');
+        // console.log(id);
+
+        $.ajax({
+			type: 'POST',
+			url : 'php/servicios/post.eliminaralumno.php=' + id,
+			dataType: 'json'
+		})
+		.done(function( data ){
+			
+			console.log("Correcto!");
+	
+            console.log( data ); // Se imprime en consola la api
+            swal("Borrado!", "Ha sido borrado.", "succes");
+        });
+
+
+
+    }
+        
+
+
 
 })();
